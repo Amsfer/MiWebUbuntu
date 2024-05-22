@@ -1,36 +1,31 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
-
-from rxconfig import config
-
 import reflex as rx
-
-docs_url = "https://reflex.dev/docs/getting-started/introduction/"
-filename = f"{config.app_name}/{config.app_name}.py"
+from MiPrimeraWeb.components.navbar import navbar
+from MiPrimeraWeb.views.header.header import header
+from MiPrimeraWeb.views.links.links import links
+from MiPrimeraWeb.components.footer import footer
+import MiPrimeraWeb.styles.styles as styles
 
 
 class State(rx.State):
-    """The app state."""
-
+    pass
 
 def index() -> rx.Component:
-    return rx.center(
-        rx.theme_panel(),
-        rx.vstack(
-            rx.heading("Bienvenido a Reflex!", size="9"),
-            rx.text("Comience editando ", rx.code(filename)),
-            rx.button(
-                "Check out our docs!",
-                on_click=lambda: rx.redirect(docs_url),
-                size="4",
-            ),
-            rx.logo(),
+    return rx.box(
+        navbar(),
+        rx.center(
+            rx.vstack(
+            header(),
+            links(),
+            max_width=styles.MAX_WIDTH,
+            width="100%", #redimencionamiento
+            margin_y=styles.Size.DEFAULT.value,
             align="center",
-            spacing="7",
-            font_size="2em",
-        ),
-        height="100vh",
+            ),
+        ),        
+        footer(),
     )
 
-
-app = rx.App()
+app = rx.App(
+    style=styles.BASE_STYLES
+)
 app.add_page(index)
