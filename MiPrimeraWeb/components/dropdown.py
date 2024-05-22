@@ -16,10 +16,10 @@ def dropdown(name: str, menu_items: list[tuple[str, dict]]) -> rx.Component:
                 rx.hstack(
                     rx.image(
                         src="https://lh3.googleusercontent.com/a/ACg8ocI_paO-FEM-CnlP-Z0O9pPb9KXiZTQ3uh93Ghi73I4FU1oOZXk=s288-c-no",
-                        width="35px",
+                        width="40px",
                         height="auto",
                         border_radius="20px 60px",
-                        border="2px solid #555",
+                        border="1px solid #555",
                     ),
                     rx.text(name),
                     rx.icon("arrow-big-down-dash"),

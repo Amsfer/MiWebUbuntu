@@ -4,6 +4,13 @@ from MiPrimeraWeb.components.dropdown import dropdown
 
 def navbar() -> rx.Component:
     return rx.hstack(
+        rx.image(
+            src="/leectorOnline.ico",
+            width="35px",
+            height="auto",
+            border_radius="50px",
+            border="2px solid #555",
+        ),
         rx.text("Leector Online"),
         rx.spacer(),
         rx.hstack(            

@@ -12,17 +12,32 @@ class State(rx.State):
 def index() -> rx.Component:
     return rx.box(
         navbar(),
-        rx.center(
-            rx.vstack(
+        rx.vstack(
             header(),
-            links(),
-            max_width=styles.MAX_WIDTH,
-            width="100%", #redimencionamiento
-            margin_y=styles.Size.DEFAULT.value,
+            rx.hstack(
+                rx.vstack(
+                    rx.text("--------------Propagandas---------------"),
+                    width="150px"
+                ),
+                rx.vstack(           
+                    links(),
+                    #max_width=styles.MAX_WIDTH,
+                    width="100%", #redimencionamiento
+                    margin_y=styles.Size.DEFAULT.value,
+                    align="center",
+                ),
+                rx.vstack(
+                    rx.text("----------------Propagandas------------"),
+                    width="150px"
+                ),
+            ),            
+            margin=styles.Size.DEFAULT.value,
             align="center",
-            ),
-        ),        
-        footer(),
+        ),
+        rx.vstack(
+            footer(),
+            align="center",
+        ),       
     )
 
 app = rx.App(
