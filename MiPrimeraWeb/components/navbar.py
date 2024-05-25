@@ -29,7 +29,7 @@ def navbar() -> rx.Component:
             rx.switch("Switched", name="switch",style={"cursor": "pointer"}),
             rx.spacer(),
             dropdown(
-                "Williams",
+                "Fernandez",
                 menu_items = [
                     ("Perfil", {"shortcut": "#item1"}),
                     ("Ajustes", {"shortcut": "#item2","href": "#item2"}),

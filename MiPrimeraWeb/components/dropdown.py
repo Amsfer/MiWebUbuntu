@@ -15,7 +15,7 @@ def dropdown(name: str, menu_items: list[tuple[str, dict]]) -> rx.Component:
             rx.menu.trigger(                
                 rx.hstack(
                     rx.image(
-                        src="https://lh3.googleusercontent.com/a/ACg8ocI_paO-FEM-CnlP-Z0O9pPb9KXiZTQ3uh93Ghi73I4FU1oOZXk=s288-c-no",
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimsqX76hrhRfgKm77u7KxlRChxZiuJoYyojuOici27w&s",
                         width="40px",
                         height="auto",
                         border_radius="20px 60px",
